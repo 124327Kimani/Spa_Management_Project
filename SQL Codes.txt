@@ -1,0 +1,5 @@
+CREATE TABLE `spa_management`.`users` (`User_ID` INT NOT NULL AUTO_INCREMENT , `Fullname` TEXT NOT NULL , `Email_Address` TEXT NOT NULL , `Phone_Number` TEXT NOT NULL , `User_Type` TEXT NOT NULL , `Password` TEXT NOT NULL , PRIMARY KEY (`User_ID`), UNIQUE (`Email_Address`)) ENGINE = InnoDB;
+
+CREATE TABLE `spa_management`.`appointments` (`Appointment_ID` INT NOT NULL AUTO_INCREMENT , `User_ID` INT NOT NULL , `Title` TEXT NOT NULL , `Date` DATE NOT NULL , `Time` TIME NOT NULL , `Details` TEXT NOT NULL , `Status` TEXT NOT NULL , PRIMARY KEY (`Appointment_ID`)) ENGINE = InnoDB;
+
+INSERT INTO `users`(`User_ID`, `Fullname`, `Email_Address`, `Phone_Number`, `User_Type`, `Password`) VALUES ('NULL','John Doe','john.doe@gmail.com','+254 654 675868','Administrator',md5('12345678'));
